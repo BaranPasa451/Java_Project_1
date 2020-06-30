@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+class calculator{
+
+    public static void main(String[] args){
+
+        Scanner input = new Scanner(System.in);
+        System.out.print("Would you like to add, subtract, multiply, or divide? Please use only one of these methods spelled earlier. Put your answer here: ");
+        String userChoince = input.next();
+
+        System.out.print("What is your first number? ");
+        float firstNum = input.nextFloat();
+
+        System.out.print("What is your second number? ");
+        float seecNum = input.nextFloat();
+
+        switch (userChoince) {
+            case "add" -> {
+                float result = firstNum + seecNum;
+                System.out.print("Here is your answer: ");
+                System.out.print(result);
+            }
+            case "subtract" -> {
+                float subResult = firstNum - seecNum;
+                System.out.print("Here is your answer: ");
+                System.out.print(subResult);
+            }
+            case "multiply" -> {
+                float multResult = firstNum * seecNum;
+                System.out.print("Here is your answer: ");
+                System.out.print(multResult);
+            }
+            case "divide" -> {
+                float divresult = firstNum / seecNum;
+                System.out.print("Here is your answer: ");
+                System.out.print(divresult);
+            }
+        }
+
+    }
+}
